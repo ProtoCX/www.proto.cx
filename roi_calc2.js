@@ -321,9 +321,9 @@ function formatStorageString(dataSelector, data) {
 	  let pricePerUser = (data.acpm > 5000) ? 0.1 : 0.5
 	  let protoPricingPerMonth = Math.round((baseValue + (data.acpm - userOffset) * pricePerUser) * discountRate)
     var protoPricing = protoPricingPerMonth * 12
-    console.log(discountRate, baseValue, userOffset, pricePerUser, protoPricingPerMonth, protoPricing)
 
     var roi = ((totalSavings - protoPricing) - protoPricing) / (protoPricing/100)
+    console.log(discountRate, baseValue, userOffset, pricePerUser, protoPricingPerMonth, protoPricing, totalSavings, roi)
     if (roi < 0) {
       return '-';
     }
