@@ -314,7 +314,6 @@ function formatStorageString(dataSelector, data) {
     let totalSavings = 9 * ((data.amch * data.acpch) + (data.amc * data.amcpc) + (data.ame * data.amcpe))
 
     // Proto Pricing
-
     let discountRate = (data.acpm <= 5000) ? 1 : (1 - (Math.ceil((data.acpm > 50000 ? 50000 : data.acpm)/10000) * 0.025 ))
 	  let baseValue = (data.acpm > 5000) ? 3000 : 1000
 	  let userOffset = (data.acpm > 5000) ? 5000 : 1000
@@ -323,7 +322,7 @@ function formatStorageString(dataSelector, data) {
     var protoPricing = protoPricingPerMonth * 12
 
     var roi = ((totalSavings - protoPricing) - protoPricing) / (protoPricing/100)
-    console.log(discountRate, baseValue, userOffset, pricePerUser, protoPricingPerMonth, protoPricing, totalSavings, roi)
+    // console.log(discountRate, baseValue, userOffset, pricePerUser, protoPricingPerMonth, protoPricing, totalSavings, roi)
     if (roi < 0) {
       return '-';
     }
