@@ -267,7 +267,7 @@ $(document).ready(function() {
             )
             tooltip.innerHTML = customers <= 250 ? `<span></span>` : `<span>$${
             (estimatedCost/customers).toFixed(2) 
-        } per customers</span>`
+        } per customer</span>`
         }
 
 
