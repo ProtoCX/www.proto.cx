@@ -265,7 +265,7 @@ $(document).ready(function() {
             $('.estimated-cost-title').text(
                 '$' + numberWithCommas(estimatedCost).toString()
             )
-            tooltip.innerHTML = customers <= 250 ? `<span></span>` : `<span>${
+            tooltip.innerHTML = customers <= 250 ? `<span></span>` : `<span>$${
             (estimatedCost/customers).toFixed(2) 
         } per customers</span>`
         }
